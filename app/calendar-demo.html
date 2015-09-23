@@ -1,0 +1,55 @@
+<div>
+  <!-- <h1>Calender app!</h1> -->
+  <h3>{{selectedMonth }} {{selectedYear }}</h3>
+
+
+<select class="selectedMonth" ng-model="selectedMonth" ng-options="month as month for month in months" ng-change='getNewMonth(selectedMonth, selectedYear)' ng-init="hi" >
+   <!-- <option ng-repeat="month in months" value="{{ month }}">
+    {{month}}
+  </option> -->
+</select>
+
+<select class="selectedYear" ng-model="selectedYear" ng-options="year as year for year in years" ng-change='getNewMonth(selectedMonth, selectedYear)'>
+  <!-- <option ng-repeat="year in years" value="{{ year }}">
+    {{year}}
+  </option> -->
+</select>
+
+<table>
+<tr>
+  <td class="day" ng-repeat="month in week1" ng-class="{active: hover, greyed : months[month.month] !== selectedMonth}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+  {{month.day}}
+</td>
+</tr>
+
+<tr>
+  <td class="day" ng-repeat="month in week2" ng-class="{active: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+  {{month.day}}
+</td>
+</tr>
+
+<tr>
+  <td class="day" ng-repeat="month in week1" ng-class="{active: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+  {{month.day}}
+</td>
+</tr>
+
+<tr>
+  <td class="day" ng-repeat="month in week3" ng-class="{active: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+  {{month.day}}
+</td>
+</tr>
+
+<tr>
+  <td class="day" ng-repeat="month in week4" ng-class="{active: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+  {{month.day}}
+</td>
+</tr>
+
+<tr>
+  <td class="day" ng-repeat="month in week5" ng-class="{active: hover, greyed: months[month.month] !== selectedMonth}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+  {{month.day}}
+</td>
+</tr>
+
+</table>

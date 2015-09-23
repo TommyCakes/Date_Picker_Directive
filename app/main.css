@@ -1,0 +1,46 @@
+/* your css code goes here */
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+}
+h3 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin:0.5em;
+  font-size:2em;
+}
+select {
+margin:10px;
+}
+table {
+  /*border-spacing: 0.5rem;*/
+  border-collapse: collapse;
+  width:100%;
+  height:82vh;
+
+}
+td {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  line-height: 20px;
+  height: 20px;
+  width: 20px;
+}
+tr {
+  /*height:30vh;*/
+  height:70px;
+  width:100px;
+
+}
+.active {
+  background: #C6DEFF;
+  opacity:0.6;
+  -webkit-transition: background-color 1s;
+  font-size:1.4em;
+}
+.greyed {
+  color:lightGrey;
+}
+.greyed:hover {
+  background: #F0FFFF;
+  opacity:0.7;
+}
